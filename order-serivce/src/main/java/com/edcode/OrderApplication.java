@@ -2,6 +2,8 @@ package com.edcode;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
 
@@ -11,7 +13,7 @@ import org.springframework.web.client.RestTemplate;
  * @description 订单
  */
 @SpringBootApplication
-//@EnableDiscoveryClient
+@EnableDiscoveryClient
 public class OrderApplication {
 
   public static void main(String[] args) {
@@ -19,7 +21,7 @@ public class OrderApplication {
   }
 
   @Bean
-//  @LoadBalanced
+  @LoadBalanced
   public RestTemplate create() {
     return new RestTemplate();
   }

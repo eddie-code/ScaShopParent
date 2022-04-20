@@ -1,8 +1,8 @@
 server:
-  port: 8400
-#spring:
-#  cloud:
-#    nacos:
-#      server-addr: localhost:8848
-#      discovery:
-#        service: stock-serv
+  port: 8000
+spring:
+  cloud:
+    nacos:
+      server-addr: 129.28.198.30:8848
+      discovery:
+        service: stock-service

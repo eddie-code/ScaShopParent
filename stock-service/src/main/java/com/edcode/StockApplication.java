@@ -2,6 +2,7 @@ package com.edcode;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 /**
  * @author eddie.lee
@@ -9,6 +10,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @description 库存
  */
 @SpringBootApplication
+@EnableDiscoveryClient
 public class StockApplication {
 
   public static void main(String[] args) {
